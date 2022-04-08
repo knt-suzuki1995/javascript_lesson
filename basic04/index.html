@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習 - 04</title>
+</head>
+
+<body>
+  <script>
+    // q1
+    var calc = {};
+
+    calc.add = function add(x, y) {
+      console.log(x + y);
+    }
+    calc.subtract = function subtract(x, y) {
+      console.log(x - y);
+    }
+    calc.multiply = function multiply(x, y) {
+      console.log(x * y);
+    }
+    calc.divide = function divide(x, y) {
+      console.log(x / y);
+    }
+
+    calc.add(2, 5);
+    calc.subtract(12, 2);
+    calc.multiply(7, 7);
+    calc.divide(15, 3);
+
+    // q2
+    function greet(name, age) {
+      var greetText = '名前は' + name + 'です。年齢は' + age + '歳です。';
+      return greetText
+    }
+
+    console.log(greet("鈴木", "26"))
+
+    // q3
+    setTimeout(function () { // これは関数なので、スコープができる
+      // この関数内で定義された変数は外からは参照できない
+      // ただ、グローバル変数にはしたくない
+      var setTimeoutText = 'ここはsetTimeoutの中の関数です';
+      resolveScope(setTimeoutText);
+    }, 3000);
+
+    // 試しに↓のコメントを外して確認すると、エラーが出る
+    // console.log(setTimeoutText);
+
+    function resolveScope(x) {
+      // このconsole.log();の()に適切な値を入れて
+      // 'ここはsetTimeoutの中の関数です'をConsoleに表示
+      // 引数を使うよ
+      console.log(x);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習 - 02</title>
+</head>
+
+<body>
+  <script>
+
+    // q1
+    var languagesArray = ['Japanese', 'English', 'Spanish', 'JavaScript']
+    console.log(languagesArray[3]);
+
+    // q2
+    var user = {
+      name: 'John',
+      age: 26,
+      bloodType: 'A',
+      favorite: 'card'
+    }
+    console.log(user.age);
+
+    // q3
+    var userList = [
+      {
+        name: 'John',
+        age: 26
+      },
+      {
+        name: 'Bob',
+        age: 33
+      },
+      {
+        name: 'Michael',
+        age: 23
+      }
+    ];
+    console.log(userList[1].name);
+
+    // q4
+    var playerList = [
+      {
+        name: 'John',
+        age: 26,
+        favorites: [
+          'Card Game',
+          'Basket Ball',
+          'Programming'
+        ]
+      },
+      {
+        name: 'Bob',
+        age: 33,
+        favorites: [
+          'Tinder',
+          'The Legend of Zelda'
+        ]
+      },
+      {
+        name: 'Michael',
+        age: 23,
+        favorites: [
+          'Football',
+          'Smash Bros.'
+        ]
+      }
+    ];
+
+    console.log(playerList[1].favorites[1]);
+
+
+    // q5
+    var showText = function () {
+      console.log('これは関数です。');
+    }
+
+    showText()
+
+    // q6
+    // この行で変数numを定義してください
+
+    var num = 0;
+
+    if (num > 0) {
+      console.log('変数numは' + num + 'で、0より大きいです。');
+    } else if (num < 0) {
+      console.log('変数numは' + num + 'で、0より小さいです。');
+    } else {
+      console.log('変数numは0です。');
+    }
+
+
+    // q7
+    var countryList = ['Japan', 'China', 'America', 'Spain', 'Germany'];
+
+    for (var i = 0; i < countryList.length; i++) {
+      var country = countryList[i];
+      console.log(country);
+    }
+
+
+    // q8
+    var numberList = [];
+
+    // ここに処理を書く
+    for (var i = 1; i <= 100; i++) {
+      numberList.push(i);
+    }
+
+    console.log(numberList);
+    // ▶︎ Array(100) と表示
+
+  </script>
+</body>
+
+</html>
